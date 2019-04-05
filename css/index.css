@@ -76,3 +76,7 @@ article.post:last-child {
     font-size: 31px;
     padding: 20px;
 }
+
+.create-form{
+    margin-top: 20px;
+}
