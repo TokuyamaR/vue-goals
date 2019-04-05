@@ -14,74 +14,85 @@
     <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 <body>
-<nav class="navbar is-white topNav">
-    <div class="container">
-        <div class="navbar-brand">
-            <h1>Activity Planner</h1>
-        </div>
-    </div>
-</nav>
-<nav class="navbar is-white">
-    <div class="container">
-        <div class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item is-active" href="#">Newest</a>
-                <a class="navbar-item" href="#">In Progress</a>
-                <a class="navbar-item" href="#">Finished</a>
+<div id="vueGoalApp">
+    <nav class="navbar is-white topNav">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1>Activity Planner</h1>
             </div>
         </div>
-    </div>
-</nav>
-<section class="container">
-    <div class="columns">
-        <div class="column is-3">
-            <a class="button is-primary is-block is-alt is-large" href="#">New Activity</a>
-        </div>
-        <div class="column is-9">
-            <div class="box content">
-                <article class="post">
-                    <h4>Reading Harry Potter</h4>
-                    <div class="media">
-                        <div class="media-left">
-                            <p class="image is-32x32">
-                                <img src="./images/user.png">
-                            </p>
-                        </div>
-                        <div class="media-content">
-                            <div class="content">
-                                <p>
-                                    <a href="#">Tokuyaman</a> updated 34 minutes ago &nbsp;
-                                </p>
-                            </div>
-                        </div>
-                        <div class="media-right">
-                            <span>進捗率のバーをここに表示</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="post">
-                    <h4>Learn Vue.js</h4>
-                    <div class="media">
-                        <div class="media-left">
-                            <p class="image is-32x32">
-                                <img src="./images/user.png">
-                            </p>
-                        </div>
-                        <div class="media-content">
-                            <div class="content">
-                                <p>
-                                    <a href="#">Tokuyaman</a> updated 40 minutes ago &nbsp;
-                                </p>
-                            </div>
-                        </div>
-                        <div class="media-right">
-                            <span>進捗率のバーをここに表示</span>
-                        </div>
-                    </div>
-                </article>
+    </nav>
+    <nav class="navbar is-white">
+        <div class="container">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-active" href="#">Newest</a>
+                    <a class="navbar-item" href="#">In Progress</a>
+                    <a class="navbar-item" href="#">Finished</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
+    <section class="container">
+        <div class="columns">
+            <div class="column is-3">
+                <a class="button is-primary is-block is-alt is-large" href="#">New Activity</a>
+                <div class="create-form">
+                    <h2 class="title">Create Activity</h2>
+                    <form id="form">
+                        <div class="field">
+                            <label class="label">Title</label>
+                            <div class="control">
+                                <input type="text" class="input" placeholder="Buy movie tickets">
+                            </div>
+                        </div>
+                        <div class="field is-ground">
+                            <div class="control">
+                                <button class="button is-link">Create Goal</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="column is-9">
+                <div class="box content">
+                    <article class="post">
+                        <h4>Reading Harry Potter</h4>
+                        <div class="media">
+                            <div class="media-left">
+                                <p class="image is-32x32">
+                                    <img src="./images/user.png">
+                                </p>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <a href="#">Tokuyaman</a> updated 34 minutes ago &nbsp;
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="media-right">
+                                <span>進捗率のバーをここに表示</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./components/ActivityItem.js"></script>
+    <script>
+        var app = new Vue ({
+            el: ' #vueGoalApp',
+            data: {
+
+            },
+            methods: {
+
+            }
+        });
+    </script>
+</div>
 </body>
 </html>
