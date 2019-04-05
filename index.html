@@ -83,13 +83,57 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./components/ActivityItem.js"></script>
     <script>
-        var app = new Vue ({
+        var app = new Vue({
             el: ' #vueGoalApp',
             data: {
-
+                ifFormDisplayed: false,
+                message: 'Hello Vue',
+                titleMessage: 'Title Message Vueeeeeeee!!',
+                isTextDisplayed: true,
+                newActivity: {
+                    title: '',
+                    notes: ''
+                },
+                items: {1: {name: 'Raido'}, 2: {name: 'Miho'}},
+                user: {
+                    name: 'Tokuuyaman',
+                    id: 'Aj34jknvncx98812'
+                },
+                activities: {
+                    '1546968934': {
+                        id: '1546968934',
+                        title: 'Learn Vue.js',
+                        note: 'I have started since last week and it has good ',
+                        progress: 0,
+                        category: '1546969049',
+                        createdAt: 1546969144391,
+                        updatedAt: 1546969144391,
+                    },
+                    '1546969212': {
+                        id: '1546968934',
+                        title: 'Cooking Dinner',
+                        note: 'I have to buy eggs',
+                        progress: 0,
+                        category: '1546969049',
+                        createdAt: 1546969144391,
+                        updatedAt: 1546969144391,
+                    },
+                    categories: {
+                        '1546969049': {text: 'books'},
+                        '1546969225': {text: 'movies'}
+                    }
+                }
             },
             methods: {
-
+                toggleTextDisplay() {
+                    this.isTextDisplayed = !this.isTextDisplayed
+                },
+                toggleFormDisplay() {
+                    this.isFormDiplayed = !this.isFormDiplayed
+                },
+                createActivity() {
+                    console.log(this.newActivity)
+                }
             }
         });
     </script>
