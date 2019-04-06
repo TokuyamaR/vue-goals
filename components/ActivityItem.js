@@ -1,8 +1,9 @@
 Vue.component('activity-item', {
-    props:['activity'],
-    template:`
+    props: ['activity'],
+    template: `
     <article class="post">
-        <h4>Learn Vue.js</h4>
+        <h4>{{ activity.title }}</h4>
+        <p>{{ activity.note }}</p>
         <div class="media">
             <div class="media-left">
                 <p class="image is-32x32">
@@ -12,12 +13,12 @@ Vue.component('activity-item', {
             <div class="media-content">
                 <div class="content">
                     <p>
-                        <a href="#">Tokuyaman</a> updated 40 minutes ago &nbsp;
+                        <a href="#">Tokuyaman</a> updated {{ activity.updatedAt }} minutes ago &nbsp;
                     </p>
                 </div>
             </div>
             <div class="media-right">
-                <span>進捗率のバーをここに表示</span>
+                <span>Display the progress bar here.</span>
             </div>
         </div>
     </article>    
